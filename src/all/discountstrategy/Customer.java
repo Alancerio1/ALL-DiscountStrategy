@@ -31,7 +31,7 @@ public class Customer {
         this.customerId = CustomerId;
     }
 
-    public String getCustomerName() {
+    public final String getCustomerName() {
         return customerName;
     }
 

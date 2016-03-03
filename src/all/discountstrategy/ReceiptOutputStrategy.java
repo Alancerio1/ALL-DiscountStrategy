@@ -9,7 +9,8 @@ package all.discountstrategy;
  *
  * @author alancerio18
  */
-public interface DiscountStrategy {
-    public abstract double getDiscountAmount(int quantity, double unitCost);
-    double getAmountSaved(double unitPrice, int quantity);
+public interface ReceiptOutputStrategy {
+    
+    public abstract void outputReceipt(Receipt r);
+    public abstract void outputMessage(String msg);
 }

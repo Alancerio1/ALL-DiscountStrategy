@@ -49,4 +49,13 @@ public class QuantityDiscount implements DiscountStrategy {
 
     }
 
+    @Override
+    public double getAmountSaved(double unitPrice, int quantity){
+        if(quantity >= minimumQuantity){
+        return unitPrice * quantity * discountRate;
+        }else{
+            return 0;
+        }
+    };
+
 }

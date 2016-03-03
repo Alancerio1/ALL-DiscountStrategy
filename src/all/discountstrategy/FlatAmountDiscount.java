@@ -10,6 +10,7 @@ package all.discountstrategy;
  * @author alancerio18
  */
 public class FlatAmountDiscount implements DiscountStrategy {
+
     private double discountRate = 5.00;
 
     public FlatAmountDiscount(double discountRate) {
@@ -19,21 +20,22 @@ public class FlatAmountDiscount implements DiscountStrategy {
     public final double getDiscountRate() {
         return discountRate;
     }
-   
 
     public void setDiscountRate(double discountRate) {
         //needs validation
         this.discountRate = discountRate;
     }
-    
-    
+
     @Override
     public final double getDiscountAmount(int quantity, double unitCost) {
         //needs validation
         return discountRate;
-        
-        
+
     }
-    
-    
+
+    @Override
+    public double getAmountSaved(double unitPrice, int quantity) {
+        return discountRate;
+    }
+
 }
